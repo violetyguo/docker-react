@@ -6,6 +6,6 @@ before_install:
   - docker build -t violetguo/docker-react -f Dockerfile.dev . 
 
 script:
-  - docker run violetguo/docker-react npm run test -- --coverage
+  - docker run -e CI=true violetguo/docker-react npm run test -- --coverage
 
   
